@@ -1,0 +1,23 @@
+{% from "bootstrap5/form.html" import render_form %}
+{% include "header.html" %}
+
+<section>
+    <div class="container">
+        <div class="login-pg">
+            <img src="{{ url_for('static', filename='images/pngwing.com.png') }}" height="50px" width="50px" class="frame-img">
+            <p class="head-tag mx-3">Get Started</p>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                  {% for message in messages: %}
+                  <p class="flashes">{{ message }}</p>
+                  {% endfor %}
+                {% endif %}
+              {% endwith %}
+            {{ render_form(form, novalidate=True) }}
+
+        </div>
+    </div>
+    <div class="text-center">
+        <p class="h-3 py-3" style="line-height: 40px">Don't have an account,<br> <a href="{{ url_for('register') }}" style="color:blue">Register</a> instead!</p>
+    </div>
+</section>

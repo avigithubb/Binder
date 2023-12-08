@@ -1,0 +1,152 @@
+{% from "bootstrap5/form.html" import render_form %}
+{% block content %}
+{% include "header.html" %}
+
+<section class="form" style="width: 100%">
+  <div class="container">
+
+      <div class="pb-3">
+          <img src="{{ url_for('static', filename='images/pngwing.com.png') }}" width="50px" height="50px" class="center-img">
+      </div>
+      <div class="col-md-7 col-lg-12">
+        <form class="needs-validation" novalidate="" method="post" enctype="multipart/form-data">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="Name" placeholder="" value="" required="" fdprocessedid="i27zx" name="username">
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="username" class="form-label">Username</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="username" placeholder="Username" required="" fdprocessedid="t9xxyh" name="username">
+              <div class="invalid-feedback">
+                  Your username is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com" fdprocessedid="0q7gqe" name="email">
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" name="password">
+              <div class="invalid-feedback">
+                Please enter a valid ranged password
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="occupation" class="form-label">Occupation</label>
+              <input type="text" class="form-control" id="occupation" name="occupation">
+            </div>
+
+            <div class="col-12">
+              <label for="qualification" class="form-label">Qualifications</label>
+              <input type="text" class="form-control" id="qualification" name="qualification">
+            </div>
+
+            <div class="col-12">
+              <label for="zodiac" class="form-label">Zodiac Sign</label>
+              <input type="text" class="form-control" id="zodiac" name="zodiac">
+            </div>
+
+            <div class="col-12">
+              <label for="height" class="form-label">Height</label>
+              <input type="text" class="form-control" id="height" name="height">
+            </div>
+
+            <div class="col-12">
+              <label for="food" class="form-label">Fav Food</label>
+              <input type="text" class="form-control" id="food" name="food">
+            </div>
+
+            <div class="col-12">
+              <label for="lang" class="form-label">Languages you Know</label>
+              <input type="text" class="form-control" id="lang" name="lang">
+            </div>
+
+            <div class="col-12">
+              <label for="passion" class="form-label">Passion</label>
+              <input type="text" class="form-control" id="passion" name="passion">
+            </div>
+
+            <div class="col-12">
+              <label for="status" class="form-label">Social Status</label>
+              <select name="social" class="form-select" id="status">
+                <option value="">Choose...</option>
+                <option>Active</option>
+                <option>Not Active</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="img" class="form-label">Upload your image</label>
+              <input class="form-control" type="file" id="formFile" name="image" accept="image/*" required>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Address</label>
+              <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="" fdprocessedid="84dspw" name="address">
+              <div class="invalid-feedback">
+                Please enter a valid address.
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Country</label>
+              <select class="form-select" id="country" required="" fdprocessedid="dt7ao" name="country">
+                <option value="">Choose...</option>
+                <option>United States</option>
+                <option>India</option>
+                <option>Germany</option>
+                <option>China</option>
+                <option>Canada</option>
+                <option>United Kingdom</option>
+                <option>Germany</option>
+                <option>Australia</option>
+                <option>Italy</option>
+                <option>Denmark</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">State</label>
+              <input type="text" class="form-control" id="city" placeholder="Your City" required="" fdprocessedid="t9xxyh" name="state">
+              <div class="invalid-feedback">
+                Please provide a valid state.
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="zip" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="zip" placeholder="" required="" fdprocessedid="33115f" name="zip">
+              <div class="invalid-feedback">
+                Zip code required.
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <a href="{{ url_for('login') }}"><button class="w-100 btn btn-primary btn-lg" type="submit" fdprocessedid="9bmp8">Create account</button></a>
+        </form>
+      </div>
+  </div>
+
+</section>
+
+{% endblock %}
